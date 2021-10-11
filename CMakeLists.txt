@@ -51,11 +51,11 @@ endif()
 add_compile_options(-Wall -Wextra -Werror -Wfatal-errors -Wno-missing-braces)
 
 
-execute_process(
-    COMMAND git describe --dirty --always
-    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-    OUTPUT_VARIABLE OTBR_GIT_VERSION OUTPUT_STRIP_TRAILING_WHITESPACE
-)
+#execute_process(
+#    COMMAND git describe --dirty --always
+#    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+#    OUTPUT_VARIABLE OTBR_GIT_VERSION OUTPUT_STRIP_TRAILING_WHITESPACE
+#)
 
 if(OTBR_GIT_VERSION)
     set(OTBR_VERSION "${PROJECT_VERSION}-${OTBR_GIT_VERSION}")
